@@ -3,7 +3,7 @@
 
 - name: install haproxy
   yum:
-    name: {{ payload }}
+    name: "{{ payload }}"
     state: present
   tags:
     - install_haproxy
@@ -18,7 +18,7 @@
 
 - name: enable haproxy
   service:
-    name: {{ payload }}
+    name: "{{ payload }}"
     enabled: true 
     state: started
   tags:

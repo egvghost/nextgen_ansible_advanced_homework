@@ -1,22 +1,22 @@
 ---
 - name: install tomcat
   package:
-    name: {{ payload }}
+    name: "{{ payload }}"
     state: latest
 
 - name: enable tomcat at boot
   service:
-    name: {{ payload }}
+    name: "{{ payload }}"
     enabled: yes
 
 - name: create ansible tomcat directory
   file:
-    path: {{ tomcat_web_root }}
+    path: "{{ tomcat_web_root }}"
     state: directory
 
 - name: create ansible tomcat directory
   file:
-    path: {{ tomcat_web_ansible }}
+    path: "{{ tomcat_web_ansible }}"
     state: directory
 
 - name: copy static index.html to tomcat webapps/ROOT/index.html

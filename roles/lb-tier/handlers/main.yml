@@ -1,7 +1,7 @@
 ---
 
-- name: restart {{ payload }}
+- name: "restart {{ payload }}"
   service:
-    name: {{ payload }}
+    name: "{{ payload }}"
     state: restarted
 
