@@ -8,15 +8,11 @@
   service:
     name: "{{ payload }}"
     enabled: yes
+    state: started
 
 - name: create ansible tomcat directory
   file:
     path: "{{ tomcat_web_root }}"
-    state: directory
-
-- name: create ansible tomcat directory
-  file:
-    path: "{{ tomcat_web_ansible }}"
     state: directory
 
 - name: copy static index.html to tomcat webapps/ROOT/index.html
@@ -24,9 +20,5 @@
     src: index.html.j2
     dest: "{{ tomcat_web_root }}/index.html"
     mode: 0644
-  notify: start {{ payload }}
+  notify: restart {{ payload }}
 
-- name: copy static index.html to tomcat webapps/ansible/index.html
-  template:
-    src: "index.html.{{ ansible_hostname }}"
-    dest: "{{ tomcat_web_ansible }}/index.html"
