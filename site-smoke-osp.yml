@@ -15,7 +15,13 @@
     with_items:
       - "{{ r_os_server_info.openstack_servers }}"
     register: r_webpage
-    
+
+  - debug:
+      msg: "{{ r_os_server_info.openstack_servers }}"
+
+  - debug:
+      var: r_webpage.content    
+
   - name: Fail if 'Ansible has done its job' is not in the page content
     fail:
     when: "'Ansible has done its job' not in r_webpage.content"
