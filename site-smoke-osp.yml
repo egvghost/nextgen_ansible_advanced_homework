@@ -16,11 +16,11 @@
       - "{{ r_os_server_info.openstack_servers }}"
     register: r_webpage
 
-  - debug:
-      msg: "{{ r_os_server_info.openstack_servers }}"
+#  - debug:
+#      msg: "{{ r_os_server_info.openstack_servers }}"
 
   - debug:
-      var: r_webpage.content    
+      var: r_webpage
 
 #  - name: Fail if 'Ansible has done its job' is not in the page content
 #    fail:
