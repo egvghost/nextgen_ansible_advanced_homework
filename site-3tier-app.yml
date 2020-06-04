@@ -1,11 +1,12 @@
+---
+#Playbook to deploy three tier app
+
 - hosts: workstation
   gather_facts: true
   roles:
   - name: osp-facts
 
 # Setup front-end load balancer tier
-
-
 - name: setup load-balancer tier
   hosts: frontends
   become: yes
@@ -14,7 +15,6 @@
     - {name: lb-tier, tags: [lbs, haproxy]}
 
 # Setup application servers tier
-
 - name: setup app tier
   hosts: apps
   become: yes
@@ -24,7 +24,6 @@
     - {name: app-tier, tags: [apps, tomcat]}
 
 # Setup database tier
-
 - name: setup database tier
   become: yes
   hosts: appdbs

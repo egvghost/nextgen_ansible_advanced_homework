@@ -1,6 +1,10 @@
+---
+# Check if aws instances are up
+
 - hosts: all
   gather_facts: false
   tasks:
+  
   - name: Check the instances status
     wait_for:
       host: "{{ item }}"

@@ -1,5 +1,6 @@
 ---
-# tasks file for osp.servers
+#Create new server instances and attaches them to a network 
+
 - name: Create new server instances and attaches them a network and passes metadata to the instance
   os_server:
     cloud: openstack
@@ -22,7 +23,6 @@
     - meta
   tags:
   - test.servers
-
 
 - name: Add floating IP to Servers
   os_floating_ip:

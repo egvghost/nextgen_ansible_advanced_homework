@@ -1,4 +1,5 @@
 ---
+#Handler to restart service
 
 - name: "restart {{ payload }}"
   service:

@@ -1,5 +1,5 @@
 ---
-# tasks file for load-balancer
+#Setup load-balance server
 
 - name: install haproxy
   yum:

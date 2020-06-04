@@ -1,3 +1,6 @@
+---
+#Create flavor
+
 - name: Create m1.medium flavor
   os_nova_flavor:
      cloud: openstack

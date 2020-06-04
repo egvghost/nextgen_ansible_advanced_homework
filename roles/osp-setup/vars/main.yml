@@ -16,7 +16,6 @@ osp_networks:
     allocation_pool_start: 192.0.2.150
     allocation_pool_end: 192.0.2.200
 
-
   # Private Facing Network   
   internal:
     cloud_name: openstack
