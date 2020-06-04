@@ -1,6 +1,6 @@
----
 galaxy_info:
   author: Eduardo Vidal
   description: Setup load-balance server
   company: IBM   
+
 dependencies: []

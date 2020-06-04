@@ -1,6 +1,6 @@
----
 galaxy_info:
   author: Eduardo Vidal
   description: Setup app servers
   company: IBM
+
 dependencies: []
